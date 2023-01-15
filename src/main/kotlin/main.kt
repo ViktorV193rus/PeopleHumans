@@ -1,15 +1,15 @@
-const val likes = 1001
+const val likes = 121
 fun main() {
     println("Понравилось $likes ${likesHumansPeople()}")
 }
 
-    fun likesHumansPeople(): String {
-        val humans = "Человеку"
-        val people = "Людям"
-        return if (likes % 2 == 0) {
-            people
-        } else {
-            humans
-        }
+fun likesHumansPeople(): String {
+    val humans = "Человеку"
+    val people = "Людям"
+    return if (likes % 10 == 1 && likes % 100 != 11) {
+        humans
+    } else {
+        people
     }
-//Мне кажется я как то не так реализовал это... Дайте пожалуйста комментарий
+}
+
